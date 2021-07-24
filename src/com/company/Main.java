@@ -23,6 +23,8 @@ public class Main {
 
         int action = -1;
         boolean isRun = true;
+        int brightness = 100;
+        int state = 2;
 
         while (isRun) {
             System.out.println("==========");
@@ -38,13 +40,16 @@ public class Main {
             switch (action) {
                 case 1: {
                     System.out.println("Чтобы включить лампочку нажмите 1, чтобы выключить нажмите 2");
-                    int state = input.nextInt();
+                    state = input.nextInt();
                     currentState(state);
+                    System.out.println("Яркость лампочки: "+brightness+"%");
                 }
                 break;
 
                 case 2: {
-                    int brightness = input.nextInt();
+                    System.out.println("Введите необходимую яркость в %: ");
+                    brightness = input.nextInt();
+                    currentState(state);
                     System.out.println("Яркость лампочки: "+brightness+"%");
                 }
                 break;
