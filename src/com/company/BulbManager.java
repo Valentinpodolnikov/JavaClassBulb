@@ -60,7 +60,7 @@ public class BulbManager {
         int index = getIndexByIdBulb(id);
 
         if (index == -1) {
-            throw new Exception("car with id = " + id + " not found");
+            throw new Exception("Bulb with id = " + id + " not found");
         }
 
         Bulb[] tempBulbs = new Bulb[bulbs.length - 1];
